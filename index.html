@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&family=Montserrat:ital@1&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css\indexstyle.css">
+
+    <title>Ellaine Villacastin | Portfolio</title>
+  </head>
+  <body>
+   
+    <section id="nav-bar">
+  <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand logo" href="#"><i class="fa fa-laptop"></i>ELENA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#nav-bar">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutme">ABOUT ME</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#project">PROJECT</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="contactus.php">CONTACT</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://www.facebook.com/binagellaine"><i class="fa fa-facebook-square"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.instagram.com/ellainebinagg_"><i class="fa fa-instagram"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.linkedin.com/in/ellaine-villacastin-304653211/"><i class="fa fa-linkedin-square"></i></a>
+      </li>
+       
+    </ul>
+  </div>
+</nav>
+</section>
+
+<section id="banner">
+  <div class="text-container">
+        <p class="subtitle">Hello!</p>
+        <p class="title">I'M ELLAINE VILLACASTIN</p>
+        <p class="subtitle">I am IT Graduate</p>
+        <button class="btn-hire"><a href="#contact">HIRE ME</a></button>
+  </div>
+
+  <img src="images/j102n-9_126-removebg-preview.png" class="model" alt="model">
+</section>
+<section id="aboutme">
+<div class="aboutme">
+  <div class="about-text">
+    <p class="moreinfo">ABOUT ME</p>
+    <p>Hello, My name is Ellaine Villacastin. 22 years old.</p>
+    <p>I graduated Bachelor of Science in Information Technology Service Management at University of Makati and chose that because I've always been so interested in technology.
+      <br>I did my internship at Erovoutika International Corporation as Web Developer.</p>
+    <button class="btn-hire" onclick="download()">DOWNLOAD CV</button>
+    
+      <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+   </script>
+   <script> 
+      function download(){
+          axios({
+              url:'VILLACASTINELLAINE_RESUME.pdf',
+              method:'GET',
+              responseType: 'blob'
+      })
+      .then((response) => {
+             const url = window.URL
+             .createObjectURL(new Blob([response.data]));
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.setAttribute('download', 'VILLACASTINELLAINE_RESUME.pdf');
+                    document.body.appendChild(link);
+                    link.click();
+      })
+      }
+        
+   </script>
+     
+
+  </div>
+</div>
+</section>
+
+<section id="project">
+<div class="project">
+  <div class="project-text">
+    <h4 class="moreinfo">PROJECTS</h4><br>
+  </div>
+  <div class="project-box">
+    <div class="box-1">
+        <center><p class="h4">Barangay Health Center Management System</p></center>
+     
+<center>
+<video width="350" height="200" controls>
+  <source src="images/WECARE.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</center>
+    </div>
+
+    <div class="box-2">
+      <br><center><p class="h4">Learning  Management System</p></center><br><br>
+      <center><button class="btn-hire">VIDEO NOT AVAILABLE</button></center>
+    </div>
+    
+  </div>
+  
+</div>
+
+</section>
+<section id="contact">
+<div class="contact">
+  <div class="contact-text"><br>
+    <p class="moreinfo">WANT TO HIRE ME?</p>
+    <div class="social">
+    <p><a href=""><i class="fa fa-envelope"></i> ellainevillacastin028@gmail.com</a></p>
+    <p><a href=""><i class="fa fa-phone"></i> 0977 067 2068</a></p>
+
+    
+  </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/binagellaine"><i class="fa fa-facebook-square"></i></a>
+     <a href="https://www.instagram.com/ellainebinagg_"><i class="fa fa-instagram"></i></a>
+     <a href="https://www.linkedin.com/in/ellaine-villacastin-304653211/"><i class="fa fa-linkedin-square"></i></a>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
